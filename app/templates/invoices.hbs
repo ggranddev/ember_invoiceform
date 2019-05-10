@@ -1,0 +1,7 @@
+{{#each this.model.invoices as |invoiceData|}}
+	<InvoiceItem @invoice={{invoiceData}} />
+{{/each}}
+
+{{#link-to "add" class="button"}}
+	Add
+{{/link-to}}
