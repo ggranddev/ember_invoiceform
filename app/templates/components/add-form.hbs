@@ -7,3 +7,8 @@
 <button class="btn" {{action "addInvoice"}}>
 	Ok
 </button>
+
+{{#each invoices as |invoice|}}
+	{{invoice.id}}
+	{{invoice.name}}
+{{/each}}
