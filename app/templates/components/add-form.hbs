@@ -1,12 +1,29 @@
-{{input value=item_id }}
+<div class="add-form">
+	<div class="form-item-container">
+		<span>ID:</span>
+		{{input value=item_id }}
+	</div>
+	<div class="form-item-container">
+		<span>Amount:</span>
+		{{input value=item_amount }}
+	</div>
+	<div class="form-item-container">
+		<span>Date:</span>
+		{{input value=item_date }}
+	</div>
+	<div class="form-item-container">
+		<span>From:</span>
+		{{input value=item_from }}
+	</div>
 
-{{#link-to "invoices" class="button"}}
-	Cancel
-{{/link-to}}
+	{{#link-to "invoices" class="button"}}
+		Cancel
+	{{/link-to}}
 
-<button class="btn" {{action "addInvoice"}}>
-	Ok
-</button>
+	<button class="btn" {{action "addInvoice"}}>
+		Ok
+	</button>
+</div>
 
 {{#each invoices as |invoice|}}
 	{{invoice.id}}

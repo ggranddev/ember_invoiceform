@@ -3,6 +3,8 @@ import { A } from "@ember/array";
 
 export default Component.extend({
 	store: Ember.inject.service(),
+	item_id: 'string',
+
 	init() {
 		this._super(...arguments);
 		this.set('error', A([]));
@@ -33,7 +35,8 @@ export default Component.extend({
 
 	actions: {
 		addInvoice() {
-			console.log("addd invoices", this.get('invoices'));
+			// console.log("addd invoices", this.get('invoices'));
+			console.log("get input value", this.get('item_id'));
 			this.set('invoices', [{id: '123', name: 'abc'},{id: '124', name: 'abcd'}])
 		}
 	}
